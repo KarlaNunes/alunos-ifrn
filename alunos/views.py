@@ -30,8 +30,8 @@ def editar_aluno(request, pk):
             return redirect('listar_alunos')
         
     else: 
-        form = FormAluno()
-        return render(request, 'alunos/editar_aluno.html', { 'form': form })
+        form = FormAluno(instance=aluno)
+    return render(request, 'alunos/editar_aluno.html', { 'form': form })
     
 def deletar_aluno(request, pk):
     aluno = Aluno.objects.get(pk=pk)

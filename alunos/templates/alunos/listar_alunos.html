@@ -12,8 +12,8 @@
         <p>Curso: {{ aluno.curso }}</p>
         <p>
           Ações:
-          <a href="editar/">Editar</a>
-          <a href="deletar/">Remover</a>
+          <a href="{% url 'editar_aluno' aluno.pk %}">Editar</a>
+          <a href="{% url 'deletar_aluno' aluno.pk %}">Remover</a>
         </p>
       </li>
     {% endfor %}
