@@ -13,7 +13,7 @@ def criar_aluno(request):
             return redirect('listar_alunos')
     else:
         form = FormAluno()
-        return render(request, 'alunos/criar_alunos.html', { 'form': form })
+        return render(request, 'alunos/criar_aluno.html', { 'form': form })
             
 def listar_alunos(request):
     alunos = Aluno.objects.all()
