@@ -1,0 +1,21 @@
+{% extends 'alunos/base.html' %}
+
+{% block content %}
+  <a href="criar/">Novo cadastro</a>
+  <ul>
+    {% for aluno in alunos %}
+      <li>
+        <p>Nome: {{ aluno.nome }}</p>
+        <p>Idade: {{ aluno.idade }}</p>
+        <p>Email: {{ aluno.email }}</p>
+        <p>Cidade: {{ aluno.cidade }}</p>
+        <p>Curso: {{ aluno.curso }}</p>
+        <p>
+          Ações:
+          <a href="editar/">Editar</a>
+          <a href="deletar/">Remover</a>
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

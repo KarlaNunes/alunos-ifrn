@@ -1,0 +1,8 @@
+{% extends 'alunos/base.html' %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Salvar</button>
+  </form>
+{% endblock %}
